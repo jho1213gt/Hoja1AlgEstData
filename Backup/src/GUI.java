@@ -21,10 +21,10 @@ private Radio radio= new Radio();
         initComponents();
         bloq();                        
         if(radio.isFrecuencia()){
-            am.setSelected(true);
+            fm.setSelected(true);
         }
         else{
-            fm.setSelected(true);
+            am.setSelected(true);
     }        
     }
 
