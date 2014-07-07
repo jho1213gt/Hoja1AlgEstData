@@ -196,7 +196,24 @@ public class Radio {
     public double subirEstacion(double estacion){
         this.estacion=estacion;
         if(frecuencia){
-            
+            if(estacion<107.9){
+              estacion+=0.2;
+              return estacion;
+           }
+            else{
+                estacion=87.9;
+                return estacion;
+            }
+        }
+        else{
+           if(estacion<1610){
+              estacion+=10;
+              return estacion;
+           }
+            else{
+                estacion=530;
+                return estacion;
+            }
         }
     }
     public boolean isFrecuencia() {
@@ -313,6 +330,22 @@ public class Radio {
 
     public void setF12(double f12) {
         this.f12 = f12;
+    }
+
+    public double getEstacionAM() {
+        return estacionAM;
+    }
+
+    public void setEstacionAM(double estacionAM) {
+        this.estacionAM = estacionAM;
+    }
+
+    public double getEstacionFM() {
+        return estacionFM;
+    }
+
+    public void setEstacionFM(double estacionFM) {
+        this.estacionFM = estacionFM;
     }
     
     
