@@ -36,7 +36,6 @@ private boolean encendido;
     private void initComponents() {
 
         buttonGroup1 = new javax.swing.ButtonGroup();
-        buttonGroup2 = new javax.swing.ButtonGroup();
         am = new javax.swing.JRadioButton();
         fm = new javax.swing.JRadioButton();
         lblFrecuencia = new javax.swing.JLabel();
@@ -62,7 +61,6 @@ private boolean encendido;
         b7 = new javax.swing.JButton();
         lblTitulo = new javax.swing.JLabel();
         fijarFav = new javax.swing.JRadioButton();
-        mostrarFav = new javax.swing.JRadioButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -105,26 +103,81 @@ private boolean encendido;
         lblFav.setText("Favoritos");
 
         b1.setText("1");
+        b1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                b1ActionPerformed(evt);
+            }
+        });
 
         b2.setText("2");
+        b2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                b2ActionPerformed(evt);
+            }
+        });
 
         b3.setText("3");
+        b3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                b3ActionPerformed(evt);
+            }
+        });
 
         b4.setText("4");
+        b4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                b4ActionPerformed(evt);
+            }
+        });
 
         b5.setText("5");
+        b5.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                b5ActionPerformed(evt);
+            }
+        });
 
         b6.setText("6");
+        b6.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                b6ActionPerformed(evt);
+            }
+        });
 
         b8.setText("8");
+        b8.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                b8ActionPerformed(evt);
+            }
+        });
 
         b9.setText("9");
+        b9.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                b9ActionPerformed(evt);
+            }
+        });
 
         b10.setText("10");
+        b10.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                b10ActionPerformed(evt);
+            }
+        });
 
         b11.setText("11");
+        b11.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                b11ActionPerformed(evt);
+            }
+        });
 
         b12.setText("12");
+        b12.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                b12ActionPerformed(evt);
+            }
+        });
 
         bSalir.setText("Salir");
         bSalir.addActionListener(new java.awt.event.ActionListener() {
@@ -149,15 +202,16 @@ private boolean encendido;
         });
 
         b7.setText("7");
+        b7.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                b7ActionPerformed(evt);
+            }
+        });
 
         lblTitulo.setFont(new java.awt.Font("Kunstler Script", 2, 48)); // NOI18N
         lblTitulo.setText("Ferrari 458 Italia");
 
-        buttonGroup2.add(fijarFav);
         fijarFav.setText("Fijar Favorito");
-
-        buttonGroup2.add(mostrarFav);
-        mostrarFav.setText("Mostrar Favorito");
 
         org.jdesktop.layout.GroupLayout layout = new org.jdesktop.layout.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -195,8 +249,8 @@ private boolean encendido;
                             .add(layout.createSequentialGroup()
                                 .add(lblFav, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 104, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(org.jdesktop.layout.LayoutStyle.UNRELATED)
-                                .add(mostrarFav)))
-                        .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .add(fijarFav)))
+                        .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED, 55, Short.MAX_VALUE)
                         .add(layout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING, false)
                             .add(bSalir, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .add(bOnOff, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 91, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
@@ -213,19 +267,17 @@ private boolean encendido;
                             .add(layout.createSequentialGroup()
                                 .add(120, 120, 120)
                                 .add(lblTituloEstacion)
-                                .addPreferredGap(org.jdesktop.layout.LayoutStyle.UNRELATED)
-                                .add(lblEstacion, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 99, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
+                                .add(18, 18, 18)
+                                .add(lblEstacion, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 65, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
                             .add(layout.createSequentialGroup()
                                 .add(167, 167, 167)
                                 .add(lblCambiar))
                             .add(layout.createSequentialGroup()
-                                .add(33, 33, 33)
-                                .add(fijarFav)
-                                .add(18, 18, 18)
+                                .add(140, 140, 140)
                                 .add(bMas, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 55, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
                                 .add(bMenos, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 52, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)))
-                        .addContainerGap(18, Short.MAX_VALUE))))
+                        .addContainerGap(44, Short.MAX_VALUE))))
             .add(layout.createSequentialGroup()
                 .add(68, 68, 68)
                 .add(lblTitulo, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 252, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
@@ -253,15 +305,12 @@ private boolean encendido;
                         .add(10, 10, 10)
                         .add(layout.createParallelGroup(org.jdesktop.layout.GroupLayout.BASELINE)
                             .add(bMas)
-                            .add(bMenos, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .add(fijarFav))))
+                            .add(bMenos, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
                 .add(layout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING, false)
                     .add(layout.createSequentialGroup()
                         .add(layout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
                             .add(lblFav)
-                            .add(layout.createSequentialGroup()
-                                .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
-                                .add(mostrarFav)))
+                            .add(fijarFav))
                         .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
                         .add(layout.createParallelGroup(org.jdesktop.layout.GroupLayout.BASELINE)
                             .add(b1)
@@ -298,7 +347,6 @@ private boolean encendido;
         lblTituloEstacion.setEnabled(false);
         lblEstacion.setEnabled(false);
         lblCambiar.setEnabled(false);
-        mostrarFav.setEnabled(false);
         fijarFav.setEnabled(false);
         am.setEnabled(false);
         fm.setEnabled(false);    
@@ -328,7 +376,6 @@ private boolean encendido;
         fm.setEnabled(true);
         bMas.setEnabled(true);
         bMenos.setEnabled(true);
-        mostrarFav.setEnabled(true);
         fijarFav.setEnabled(true);
         b1.setEnabled(true);
         b2.setEnabled(true);
@@ -360,11 +407,13 @@ private boolean encendido;
     }//GEN-LAST:event_bSalirActionPerformed
 
     private void amActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_amActionPerformed
-        lblEstacion.setText(""+radio.getEstacionAM());        
+        lblEstacion.setText(""+radio.getEstacionAM());  
+        radio.cambiarFrecuencia(false);
     }//GEN-LAST:event_amActionPerformed
 
     private void fmActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_fmActionPerformed
         lblEstacion.setText(""+radio.getEstacionFM());
+        radio.cambiarFrecuencia(true);
     }//GEN-LAST:event_fmActionPerformed
 
     private void bMasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bMasActionPerformed
@@ -376,6 +425,114 @@ private boolean encendido;
         radio.bajarEstacion();
         lblEstacion.setText(""+radio.getEstacion());
     }//GEN-LAST:event_bMenosActionPerformed
+
+    private void b1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_b1ActionPerformed
+        if(fijarFav.isSelected()){
+            radio.guardar(1,radio.getEstacion());
+        }
+        else{
+            lblEstacion.setText(""+radio.getF1());
+        }
+    }//GEN-LAST:event_b1ActionPerformed
+
+    private void b2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_b2ActionPerformed
+        if(fijarFav.isSelected()){
+            radio.guardar(2,radio.getEstacion());
+        }
+        else{
+            lblEstacion.setText(""+radio.getF2());
+        }
+    }//GEN-LAST:event_b2ActionPerformed
+
+    private void b3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_b3ActionPerformed
+        if(fijarFav.isSelected()){
+            radio.guardar(3,radio.getEstacion());
+        }
+        else{
+            lblEstacion.setText(""+radio.getF3());
+        }
+    }//GEN-LAST:event_b3ActionPerformed
+
+    private void b4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_b4ActionPerformed
+        if(fijarFav.isSelected()){
+            radio.guardar(4,radio.getEstacion());
+        }
+        else{
+            lblEstacion.setText(""+radio.getF4());
+        }
+    }//GEN-LAST:event_b4ActionPerformed
+
+    private void b5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_b5ActionPerformed
+        if(fijarFav.isSelected()){
+            radio.guardar(5,radio.getEstacion());
+        }
+        else{
+            lblEstacion.setText(""+radio.getF5());
+        }
+    }//GEN-LAST:event_b5ActionPerformed
+
+    private void b6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_b6ActionPerformed
+        if(fijarFav.isSelected()){
+            radio.guardar(6,radio.getEstacion());
+        }
+        else{
+            lblEstacion.setText(""+radio.getF6());
+        }
+    }//GEN-LAST:event_b6ActionPerformed
+
+    private void b7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_b7ActionPerformed
+        if(fijarFav.isSelected()){
+            radio.guardar(7,radio.getEstacion());
+        }
+        else{
+            lblEstacion.setText(""+radio.getF7());
+        }
+    }//GEN-LAST:event_b7ActionPerformed
+
+    private void b8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_b8ActionPerformed
+        if(fijarFav.isSelected()){
+            radio.guardar(8,radio.getEstacion());
+        }
+        else{
+            lblEstacion.setText(""+radio.getF8());
+        }
+    }//GEN-LAST:event_b8ActionPerformed
+
+    private void b9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_b9ActionPerformed
+        if(fijarFav.isSelected()){
+            radio.guardar(9,radio.getEstacion());
+        }
+        else{
+            lblEstacion.setText(""+radio.getF9());
+        }
+    }//GEN-LAST:event_b9ActionPerformed
+
+    private void b10ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_b10ActionPerformed
+        if(fijarFav.isSelected()){
+            radio.guardar(10,radio.getEstacion());
+        }
+        else{
+            lblEstacion.setText(""+radio.getF10());
+        }
+    }//GEN-LAST:event_b10ActionPerformed
+
+    private void b11ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_b11ActionPerformed
+        if(fijarFav.isSelected()){
+            radio.guardar(11,radio.getEstacion());
+        }
+        else{
+            lblEstacion.setText(""+radio.getF11());
+        }
+    }//GEN-LAST:event_b11ActionPerformed
+
+    private void b12ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_b12ActionPerformed
+        if(fijarFav.isSelected()){
+            radio.guardar(12,radio.getEstacion());
+        }
+        else{
+            lblEstacion.setText(""+radio.getF12());
+        }
+    }//GEN-LAST:event_b12ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -430,7 +587,6 @@ private boolean encendido;
     private javax.swing.JToggleButton bOnOff;
     private javax.swing.JButton bSalir;
     private javax.swing.ButtonGroup buttonGroup1;
-    private javax.swing.ButtonGroup buttonGroup2;
     private javax.swing.JRadioButton fijarFav;
     private javax.swing.JRadioButton fm;
     private javax.swing.JLabel lblCambiar;
@@ -439,6 +595,5 @@ private boolean encendido;
     private javax.swing.JLabel lblFrecuencia;
     private javax.swing.JLabel lblTitulo;
     private javax.swing.JLabel lblTituloEstacion;
-    private javax.swing.JRadioButton mostrarFav;
     // End of variables declaration//GEN-END:variables
 }

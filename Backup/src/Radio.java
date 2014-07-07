@@ -222,7 +222,7 @@ public class Radio {
     }
         public double bajarEstacion(){
         if(frecuencia){
-            if(estacionFM<107.9 & estacionFM>87.9){
+            if(estacionFM<=107.9 & estacionFM>87.9){
               estacionFM-=0.2;
               estacion=estacionFM;
               return estacionFM;
@@ -234,7 +234,7 @@ public class Radio {
             }
         }
         else{
-            if(estacionAM<1610 & estacionAM>530){
+            if(estacionAM<=1610 & estacionAM>530){
                   estacionAM-=10;
                   estacion=estacionAM;
                   return estacionAM;
