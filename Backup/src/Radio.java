@@ -216,6 +216,29 @@ public class Radio {
             }
         }
     }
+        public double bajarEstacion(double estacion){
+        this.estacion=estacion;
+        if(frecuencia){
+            if(estacion<107.9 & estacion>87.9){
+              estacion-=0.2;
+              return estacion;
+           }
+            else{
+                estacion=107.9;
+                return estacion;
+            }
+        }
+        else{
+            if(estacion<1610 & estacion>530){
+                  estacion-=10;
+                  return estacion;
+            }
+                else{
+                    estacion=1610;
+                    return estacion;
+                }
+            }
+    }
     public boolean isFrecuencia() {
         return frecuencia;
     }

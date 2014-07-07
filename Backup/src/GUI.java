@@ -27,6 +27,7 @@ private boolean a=false;
     private void initComponents() {
 
         buttonGroup1 = new javax.swing.ButtonGroup();
+        buttonGroup2 = new javax.swing.ButtonGroup();
         am = new javax.swing.JRadioButton();
         fm = new javax.swing.JRadioButton();
         lblFrecuencia = new javax.swing.JLabel();
@@ -46,12 +47,13 @@ private boolean a=false;
         b10 = new javax.swing.JButton();
         b11 = new javax.swing.JButton();
         b12 = new javax.swing.JButton();
-        bFav = new javax.swing.JButton();
         bSalir = new javax.swing.JButton();
         bOnOff = new javax.swing.JToggleButton();
         bMas = new javax.swing.JButton();
         b7 = new javax.swing.JButton();
         lblTitulo = new javax.swing.JLabel();
+        fijarFav = new javax.swing.JRadioButton();
+        mostrarFav = new javax.swing.JRadioButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -111,8 +113,6 @@ private boolean a=false;
 
         b12.setText("12");
 
-        bFav.setText("Fijar Favorito");
-
         bSalir.setText("Salir");
         bSalir.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -134,6 +134,12 @@ private boolean a=false;
 
         lblTitulo.setFont(new java.awt.Font("Kunstler Script", 2, 48)); // NOI18N
         lblTitulo.setText("Ferrari 458 Italia");
+
+        buttonGroup2.add(fijarFav);
+        fijarFav.setText("Fijar Favorito");
+
+        buttonGroup2.add(mostrarFav);
+        mostrarFav.setText("Mostrar Favorito");
 
         org.jdesktop.layout.GroupLayout layout = new org.jdesktop.layout.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -170,8 +176,8 @@ private boolean a=false;
                                     .add(b12)))
                             .add(layout.createSequentialGroup()
                                 .add(lblFav, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 104, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
-                                .add(bFav)))
+                                .addPreferredGap(org.jdesktop.layout.LayoutStyle.UNRELATED)
+                                .add(mostrarFav)))
                         .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .add(layout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING, false)
                             .add(bSalir, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
@@ -195,10 +201,12 @@ private boolean a=false;
                                 .add(167, 167, 167)
                                 .add(lblCambiar))
                             .add(layout.createSequentialGroup()
-                                .add(140, 140, 140)
+                                .add(33, 33, 33)
+                                .add(fijarFav)
+                                .add(18, 18, 18)
                                 .add(bMas, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 55, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
-                                .add(bMenos, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 51, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)))
+                                .add(bMenos, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 52, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)))
                         .addContainerGap(org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
             .add(layout.createSequentialGroup()
                 .add(68, 68, 68)
@@ -227,12 +235,15 @@ private boolean a=false;
                         .add(10, 10, 10)
                         .add(layout.createParallelGroup(org.jdesktop.layout.GroupLayout.BASELINE)
                             .add(bMas)
-                            .add(bMenos, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
+                            .add(bMenos, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .add(fijarFav))))
                 .add(layout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING, false)
                     .add(layout.createSequentialGroup()
-                        .add(layout.createParallelGroup(org.jdesktop.layout.GroupLayout.BASELINE)
+                        .add(layout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
                             .add(lblFav)
-                            .add(bFav))
+                            .add(layout.createSequentialGroup()
+                                .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
+                                .add(mostrarFav)))
                         .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
                         .add(layout.createParallelGroup(org.jdesktop.layout.GroupLayout.BASELINE)
                             .add(b1)
@@ -256,7 +267,7 @@ private boolean a=false;
                             .add(b10)
                             .add(b11)
                             .add(b12))
-                        .add(0, 0, Short.MAX_VALUE))
+                        .add(0, 2, Short.MAX_VALUE))
                     .add(bSalir, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addContainerGap())
         );
@@ -269,9 +280,10 @@ private boolean a=false;
         lblTituloEstacion.setEnabled(false);
         lblEstacion.setEnabled(false);
         lblCambiar.setEnabled(false);
+        mostrarFav.setEnabled(false);
+        fijarFav.setEnabled(false);
         am.setEnabled(false);
-        fm.setEnabled(false);        
-        bFav.setEnabled(false);
+        fm.setEnabled(false);    
         bMas.setEnabled(false);
         bMenos.setEnabled(false);
         b1.setEnabled(false);
@@ -296,9 +308,10 @@ private boolean a=false;
         lblCambiar.setEnabled(true);
         am.setEnabled(true);
         fm.setEnabled(true);
-        bFav.setEnabled(true);
         bMas.setEnabled(true);
         bMenos.setEnabled(true);
+        mostrarFav.setEnabled(true);
+        fijarFav.setEnabled(true);
         b1.setEnabled(true);
         b2.setEnabled(true);
         b3.setEnabled(true);
@@ -384,12 +397,13 @@ private boolean a=false;
     private javax.swing.JButton b7;
     private javax.swing.JButton b8;
     private javax.swing.JButton b9;
-    private javax.swing.JButton bFav;
     private javax.swing.JButton bMas;
     private javax.swing.JButton bMenos;
     private javax.swing.JToggleButton bOnOff;
     private javax.swing.JButton bSalir;
     private javax.swing.ButtonGroup buttonGroup1;
+    private javax.swing.ButtonGroup buttonGroup2;
+    private javax.swing.JRadioButton fijarFav;
     private javax.swing.JRadioButton fm;
     private javax.swing.JLabel lblCambiar;
     private javax.swing.JLabel lblEstacion;
@@ -397,5 +411,6 @@ private boolean a=false;
     private javax.swing.JLabel lblFrecuencia;
     private javax.swing.JLabel lblTitulo;
     private javax.swing.JLabel lblTituloEstacion;
+    private javax.swing.JRadioButton mostrarFav;
     // End of variables declaration//GEN-END:variables
 }
