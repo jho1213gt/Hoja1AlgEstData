@@ -16,8 +16,6 @@ import javax.swing.JOptionPane;
 public class GUI extends javax.swing.JFrame {
 private boolean a=false;
 private Radio radio= new Radio();
-private double estacion;
-private boolean encendido;
 
     public GUI() {
         initComponents();
@@ -392,13 +390,13 @@ private boolean encendido;
         bOnOff.setBackground(Color.green);
     }
     private void bOnOffActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bOnOffActionPerformed
-        if(!a){
+        if(radio.isEncendido()){
             desbloq();
-            a=true;
+            radio.encender();
         }
         else{
             bloq();
-            a=false;
+            radio.apagar();
         }
     }//GEN-LAST:event_bOnOffActionPerformed
 
@@ -433,6 +431,12 @@ private boolean encendido;
         else{
             lblEstacion.setText(""+radio.getF1());
         }
+        if(radio.isFrecuencia()){
+            am.setSelected(true);
+        }
+        else{
+            fm.setSelected(true);
+        }
     }//GEN-LAST:event_b1ActionPerformed
 
     private void b2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_b2ActionPerformed
@@ -441,6 +445,12 @@ private boolean encendido;
         }
         else{
             lblEstacion.setText(""+radio.getF2());
+        }
+        if(radio.isFrecuencia()){
+            am.setSelected(true);
+        }
+        else{
+            fm.setSelected(true);
         }
     }//GEN-LAST:event_b2ActionPerformed
 
@@ -451,6 +461,12 @@ private boolean encendido;
         else{
             lblEstacion.setText(""+radio.getF3());
         }
+        if(radio.isFrecuencia()){
+            am.setSelected(true);
+        }
+        else{
+            fm.setSelected(true);
+        }
     }//GEN-LAST:event_b3ActionPerformed
 
     private void b4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_b4ActionPerformed
@@ -459,6 +475,12 @@ private boolean encendido;
         }
         else{
             lblEstacion.setText(""+radio.getF4());
+        }
+        if(radio.isFrecuencia()){
+            am.setSelected(true);
+        }
+        else{
+            fm.setSelected(true);
         }
     }//GEN-LAST:event_b4ActionPerformed
 
@@ -469,6 +491,12 @@ private boolean encendido;
         else{
             lblEstacion.setText(""+radio.getF5());
         }
+        if(radio.isFrecuencia()){
+            am.setSelected(true);
+        }
+        else{
+            fm.setSelected(true);
+        }
     }//GEN-LAST:event_b5ActionPerformed
 
     private void b6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_b6ActionPerformed
@@ -477,6 +505,12 @@ private boolean encendido;
         }
         else{
             lblEstacion.setText(""+radio.getF6());
+        }
+        if(radio.isFrecuencia()){
+            am.setSelected(true);
+        }
+        else{
+            fm.setSelected(true);
         }
     }//GEN-LAST:event_b6ActionPerformed
 
@@ -487,6 +521,12 @@ private boolean encendido;
         else{
             lblEstacion.setText(""+radio.getF7());
         }
+        if(radio.isFrecuencia()){
+            am.setSelected(true);
+        }
+        else{
+            fm.setSelected(true);
+        }
     }//GEN-LAST:event_b7ActionPerformed
 
     private void b8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_b8ActionPerformed
@@ -495,6 +535,12 @@ private boolean encendido;
         }
         else{
             lblEstacion.setText(""+radio.getF8());
+        }
+        if(radio.isFrecuencia()){
+            am.setSelected(true);
+        }
+        else{
+            fm.setSelected(true);
         }
     }//GEN-LAST:event_b8ActionPerformed
 
@@ -505,6 +551,12 @@ private boolean encendido;
         else{
             lblEstacion.setText(""+radio.getF9());
         }
+        if(radio.isFrecuencia()){
+            am.setSelected(true);
+        }
+        else{
+            fm.setSelected(true);
+        }
     }//GEN-LAST:event_b9ActionPerformed
 
     private void b10ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_b10ActionPerformed
@@ -513,6 +565,12 @@ private boolean encendido;
         }
         else{
             lblEstacion.setText(""+radio.getF10());
+        }
+        if(radio.isFrecuencia()){
+            am.setSelected(true);
+        }
+        else{
+            fm.setSelected(true);
         }
     }//GEN-LAST:event_b10ActionPerformed
 
@@ -523,6 +581,12 @@ private boolean encendido;
         else{
             lblEstacion.setText(""+radio.getF11());
         }
+        if(radio.isFrecuencia()){
+            am.setSelected(true);
+        }
+        else{
+            fm.setSelected(true);
+        }
     }//GEN-LAST:event_b11ActionPerformed
 
     private void b12ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_b12ActionPerformed
@@ -531,6 +595,12 @@ private boolean encendido;
         }
         else{
             lblEstacion.setText(""+radio.getF12());
+        }
+        if(radio.isFrecuencia()){
+            am.setSelected(true);
+        }
+        else{
+            fm.setSelected(true);
         }
     }//GEN-LAST:event_b12ActionPerformed
 
