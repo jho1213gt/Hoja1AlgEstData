@@ -13,6 +13,8 @@ public class Radio {
     private boolean frecuencia=false;
     private boolean encendido=false;
     private double estacion=0;
+    private double estacionAM=530;
+    private double estacionFM=87.9;
     private double f1=0;
     private double f2=0;
     private double f3=0;
@@ -84,39 +86,117 @@ public class Radio {
         fav=boton;
         if(fav==1){
             f1=estacion;
+            if(estacion>120){
+                frecuencia=false;
+            }
+            else{
+                frecuencia=true;
+            }
         }
         if(fav==2){
             f2=estacion;
+            if(estacion>120){
+                frecuencia=false;
+            }
+            else{
+                frecuencia=true;
+            }
         }
         if(fav==3){
             f3=estacion;
+            if(estacion>120){
+                frecuencia=false;
+            }
+            else{
+                frecuencia=true;
+            }
         }
         if(fav==4){
             f4=estacion;
+            if(estacion>120){
+                frecuencia=false;
+            }
+            else{
+                frecuencia=true;
+            }
         }
         if(fav==5){            
             f5=estacion;
+            if(estacion>120){
+                frecuencia=false;
+            }
+            else{
+                frecuencia=true;
+            }
         }
         if(fav==6){
-            f6=estacion;            
+            f6=estacion; 
+            if(estacion>120){
+                frecuencia=false;
+            }
+            else{
+                frecuencia=true;
+            }           
         }
         if(fav==7){
             f7=estacion;
+            if(estacion>120){
+                frecuencia=false;
+            }
+            else{
+                frecuencia=true;
+            }
         }    
         if(fav==8){
             f8=estacion;
+            if(estacion>120){
+                frecuencia=false;
+            }
+            else{
+                frecuencia=true;
+            }
         }
         if(fav==9){
             f9=estacion;
+            if(estacion>120){
+                frecuencia=false;
+            }
+            else{
+                frecuencia=true;
+            }
         }
         if(fav==10){
             f10=estacion;
+            if(estacion>120){
+                frecuencia=false;
+            }
+            else{
+                frecuencia=true;
+            }
         }
         if(fav==11){
             f11=estacion;
+            if(estacion>120){
+                frecuencia=false;
+            }
+            else{
+                frecuencia=true;
+            }
         }
         if(fav==12){
             f12=estacion;
+            if(estacion>120){
+                frecuencia=false;
+            }
+            else{
+                frecuencia=true;
+            }
+        }
+    }
+    public double subirEstacion(double estacion){
+        this.estacion=estacion;
+        if(frecuencia){
+            
         }
     }
     public boolean isFrecuencia() {
