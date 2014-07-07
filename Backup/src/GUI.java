@@ -92,6 +92,11 @@ private boolean encendido;
 
         bMenos.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         bMenos.setText("-");
+        bMenos.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                bMenosActionPerformed(evt);
+            }
+        });
 
         lblCambiar.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         lblCambiar.setText("Cambiar");
@@ -137,6 +142,11 @@ private boolean encendido;
 
         bMas.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         bMas.setText("+");
+        bMas.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                bMasActionPerformed(evt);
+            }
+        });
 
         b7.setText("7");
 
@@ -356,6 +366,16 @@ private boolean encendido;
     private void fmActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_fmActionPerformed
         lblEstacion.setText(""+radio.getEstacionFM());
     }//GEN-LAST:event_fmActionPerformed
+
+    private void bMasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bMasActionPerformed
+        radio.subirEstacion();
+        lblEstacion.setText(""+radio.getEstacion());
+    }//GEN-LAST:event_bMasActionPerformed
+
+    private void bMenosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bMenosActionPerformed
+        radio.bajarEstacion();
+        lblEstacion.setText(""+radio.getEstacion());
+    }//GEN-LAST:event_bMenosActionPerformed
 
     /**
      * @param args the command line arguments

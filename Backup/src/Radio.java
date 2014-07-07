@@ -193,49 +193,56 @@ public class Radio {
             }
         }
     }
-    public double subirEstacion(double estacion){
-        this.estacion=estacion;
+    public double subirEstacion(){
+        this.frecuencia=frecuencia;
         if(frecuencia){
-            if(estacion<107.9){
-              estacion+=0.2;
-              return estacion;
+            if(estacionFM<107.9){
+              estacionFM+=0.2;
+              estacion=estacionFM;
+              return estacionFM;              
            }
             else{
-                estacion=87.9;
-                return estacion;
-            }
+                estacionFM=87.9;
+                estacion=estacionFM;
+                return estacionFM;
+            }            
         }
         else{
-           if(estacion<1610){
-              estacion+=10;
-              return estacion;
+           if(estacionAM<1610){
+              estacionAM+=10;
+              estacion=estacionAM;
+              return estacionAM;
            }
             else{
-                estacion=530;
-                return estacion;
+                estacionAM=530;
+                estacion=estacionAM;
+                return estacionAM;
             }
         }
     }
-        public double bajarEstacion(double estacion){
-        this.estacion=estacion;
+        public double bajarEstacion(){
         if(frecuencia){
-            if(estacion<107.9 & estacion>87.9){
-              estacion-=0.2;
-              return estacion;
+            if(estacionFM<107.9 & estacionFM>87.9){
+              estacionFM-=0.2;
+              estacion=estacionFM;
+              return estacionFM;
            }
             else{
-                estacion=107.9;
-                return estacion;
+                estacionFM=107.9;
+                estacion=estacionFM;
+                return estacionFM;
             }
         }
         else{
-            if(estacion<1610 & estacion>530){
-                  estacion-=10;
-                  return estacion;
+            if(estacionAM<1610 & estacionAM>530){
+                  estacionAM-=10;
+                  estacion=estacionAM;
+                  return estacionAM;
             }
                 else{
-                    estacion=1610;
-                    return estacion;
+                    estacionAM=1610;
+                    estacion=estacionAM;
+                    return estacionAM;
                 }
             }
     }
