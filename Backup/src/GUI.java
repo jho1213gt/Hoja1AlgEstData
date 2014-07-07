@@ -390,7 +390,7 @@ private Radio radio= new Radio();
         bOnOff.setBackground(Color.green);
     }
     private void bOnOffActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bOnOffActionPerformed
-        if(radio.isEncendido()){
+        if(!radio.isEncendido()){
             desbloq();
             radio.encender();
         }
@@ -432,10 +432,10 @@ private Radio radio= new Radio();
             lblEstacion.setText(""+radio.getF1());
         }
         if(radio.isFrecuencia()){
-            am.setSelected(true);
+            fm.setSelected(true);
         }
         else{
-            fm.setSelected(true);
+            am.setSelected(true);
         }
     }//GEN-LAST:event_b1ActionPerformed
 
@@ -447,10 +447,10 @@ private Radio radio= new Radio();
             lblEstacion.setText(""+radio.getF2());
         }
         if(radio.isFrecuencia()){
-            am.setSelected(true);
+            fm.setSelected(true);
         }
         else{
-            fm.setSelected(true);
+            am.setSelected(true);
         }
     }//GEN-LAST:event_b2ActionPerformed
 
@@ -462,10 +462,10 @@ private Radio radio= new Radio();
             lblEstacion.setText(""+radio.getF3());
         }
         if(radio.isFrecuencia()){
-            am.setSelected(true);
+            fm.setSelected(true);
         }
         else{
-            fm.setSelected(true);
+            am.setSelected(true);
         }
     }//GEN-LAST:event_b3ActionPerformed
 
@@ -477,10 +477,10 @@ private Radio radio= new Radio();
             lblEstacion.setText(""+radio.getF4());
         }
         if(radio.isFrecuencia()){
-            am.setSelected(true);
+            fm.setSelected(true);
         }
         else{
-            fm.setSelected(true);
+            am.setSelected(true);
         }
     }//GEN-LAST:event_b4ActionPerformed
 
@@ -492,10 +492,10 @@ private Radio radio= new Radio();
             lblEstacion.setText(""+radio.getF5());
         }
         if(radio.isFrecuencia()){
-            am.setSelected(true);
+            fm.setSelected(true);
         }
         else{
-            fm.setSelected(true);
+            am.setSelected(true);
         }
     }//GEN-LAST:event_b5ActionPerformed
 
@@ -507,10 +507,10 @@ private Radio radio= new Radio();
             lblEstacion.setText(""+radio.getF6());
         }
         if(radio.isFrecuencia()){
-            am.setSelected(true);
+            fm.setSelected(true);
         }
         else{
-            fm.setSelected(true);
+            am.setSelected(true);
         }
     }//GEN-LAST:event_b6ActionPerformed
 
@@ -522,10 +522,10 @@ private Radio radio= new Radio();
             lblEstacion.setText(""+radio.getF7());
         }
         if(radio.isFrecuencia()){
-            am.setSelected(true);
+            fm.setSelected(true);
         }
         else{
-            fm.setSelected(true);
+            am.setSelected(true);
         }
     }//GEN-LAST:event_b7ActionPerformed
 
@@ -537,10 +537,10 @@ private Radio radio= new Radio();
             lblEstacion.setText(""+radio.getF8());
         }
         if(radio.isFrecuencia()){
-            am.setSelected(true);
+            fm.setSelected(true);
         }
         else{
-            fm.setSelected(true);
+            am.setSelected(true);
         }
     }//GEN-LAST:event_b8ActionPerformed
 
@@ -552,10 +552,10 @@ private Radio radio= new Radio();
             lblEstacion.setText(""+radio.getF9());
         }
         if(radio.isFrecuencia()){
-            am.setSelected(true);
+            fm.setSelected(true);
         }
         else{
-            fm.setSelected(true);
+            am.setSelected(true);
         }
     }//GEN-LAST:event_b9ActionPerformed
 
@@ -567,10 +567,10 @@ private Radio radio= new Radio();
             lblEstacion.setText(""+radio.getF10());
         }
         if(radio.isFrecuencia()){
-            am.setSelected(true);
+            fm.setSelected(true);
         }
         else{
-            fm.setSelected(true);
+            am.setSelected(true);
         }
     }//GEN-LAST:event_b10ActionPerformed
 
@@ -582,10 +582,10 @@ private Radio radio= new Radio();
             lblEstacion.setText(""+radio.getF11());
         }
         if(radio.isFrecuencia()){
-            am.setSelected(true);
+            fm.setSelected(true);
         }
         else{
-            fm.setSelected(true);
+            am.setSelected(true);
         }
     }//GEN-LAST:event_b11ActionPerformed
 
@@ -597,10 +597,10 @@ private Radio radio= new Radio();
             lblEstacion.setText(""+radio.getF12());
         }
         if(radio.isFrecuencia()){
-            am.setSelected(true);
+            fm.setSelected(true);
         }
         else{
-            fm.setSelected(true);
+            am.setSelected(true);
         }
     }//GEN-LAST:event_b12ActionPerformed
 
