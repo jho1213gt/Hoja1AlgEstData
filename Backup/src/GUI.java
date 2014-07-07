@@ -15,10 +15,19 @@ import javax.swing.JOptionPane;
 @SuppressWarnings("unchecked")
 public class GUI extends javax.swing.JFrame {
 private boolean a=false;
+private Radio radio= new Radio();
+private double estacion;
+private boolean encendido;
+
     public GUI() {
         initComponents();
-        bloq();  
-        lblEstacion.setText("------------");
+        bloq();                        
+        if(radio.isFrecuencia()){
+            am.setSelected(true);
+        }
+        else{
+            fm.setSelected(true);
+    }        
     }
 
 
@@ -80,7 +89,6 @@ private boolean a=false;
         lblTituloEstacion.setText("Estacion");
 
         lblEstacion.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
-        lblEstacion.setText("---------");
 
         bMenos.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         bMenos.setText("-");
@@ -195,7 +203,7 @@ private boolean a=false;
                             .add(layout.createSequentialGroup()
                                 .add(120, 120, 120)
                                 .add(lblTituloEstacion)
-                                .add(18, 18, 18)
+                                .addPreferredGap(org.jdesktop.layout.LayoutStyle.UNRELATED)
                                 .add(lblEstacion, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 99, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
                             .add(layout.createSequentialGroup()
                                 .add(167, 167, 167)
@@ -207,7 +215,7 @@ private boolean a=false;
                                 .add(bMas, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 55, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
                                 .add(bMenos, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 52, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)))
-                        .addContainerGap(org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
+                        .addContainerGap(18, Short.MAX_VALUE))))
             .add(layout.createSequentialGroup()
                 .add(68, 68, 68)
                 .add(lblTitulo, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 252, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
@@ -227,10 +235,10 @@ private boolean a=false;
                         .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
                         .add(fm))
                     .add(layout.createSequentialGroup()
-                        .add(layout.createParallelGroup(org.jdesktop.layout.GroupLayout.BASELINE)
+                        .add(layout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
                             .add(lblTituloEstacion)
-                            .add(lblEstacion, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 31, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
-                        .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
+                            .add(org.jdesktop.layout.GroupLayout.TRAILING, lblEstacion, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 31, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
+                        .addPreferredGap(org.jdesktop.layout.LayoutStyle.UNRELATED)
                         .add(lblCambiar)
                         .add(10, 10, 10)
                         .add(layout.createParallelGroup(org.jdesktop.layout.GroupLayout.BASELINE)
@@ -267,7 +275,7 @@ private boolean a=false;
                             .add(b10)
                             .add(b11)
                             .add(b12))
-                        .add(0, 2, Short.MAX_VALUE))
+                        .add(0, 0, Short.MAX_VALUE))
                     .add(bSalir, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addContainerGap())
         );
@@ -342,11 +350,11 @@ private boolean a=false;
     }//GEN-LAST:event_bSalirActionPerformed
 
     private void amActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_amActionPerformed
-        lblEstacion.setText("530");
+        lblEstacion.setText(""+radio.getEstacionAM());        
     }//GEN-LAST:event_amActionPerformed
 
     private void fmActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_fmActionPerformed
-        lblEstacion.setText("87.9");
+        lblEstacion.setText(""+radio.getEstacionFM());
     }//GEN-LAST:event_fmActionPerformed
 
     /**
