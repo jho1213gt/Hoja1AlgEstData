@@ -435,7 +435,7 @@ private Radio radio= new Radio();
             radio.guardar(1,radio.getEstacion());
         }
         else{
-            lblEstacion.setText(""+radio.getF1());
+            lblEstacion.setText(""+radio.sacar(1));
             seleccionarFrecuencia();
         }
     }//GEN-LAST:event_b1ActionPerformed
@@ -445,7 +445,7 @@ private Radio radio= new Radio();
             radio.guardar(2,radio.getEstacion());
         }
         else{
-            lblEstacion.setText(""+radio.getF2());
+            lblEstacion.setText(""+radio.sacar(2));
             seleccionarFrecuencia();
         }
     }//GEN-LAST:event_b2ActionPerformed
@@ -455,7 +455,7 @@ private Radio radio= new Radio();
             radio.guardar(3,radio.getEstacion());
         }
         else{
-            lblEstacion.setText(""+radio.getF3());
+            lblEstacion.setText(""+radio.sacar(3));
             seleccionarFrecuencia();
         }
     }//GEN-LAST:event_b3ActionPerformed
@@ -465,7 +465,7 @@ private Radio radio= new Radio();
             radio.guardar(4,radio.getEstacion());
         }
         else{
-            lblEstacion.setText(""+radio.getF4());
+            lblEstacion.setText(""+radio.sacar(4));
             seleccionarFrecuencia();
         }
     }//GEN-LAST:event_b4ActionPerformed
@@ -475,7 +475,7 @@ private Radio radio= new Radio();
             radio.guardar(5,radio.getEstacion());
         }
         else{
-            lblEstacion.setText(""+radio.getF5());
+            lblEstacion.setText(""+radio.sacar(5));
             seleccionarFrecuencia();
         }
     }//GEN-LAST:event_b5ActionPerformed
@@ -485,7 +485,7 @@ private Radio radio= new Radio();
             radio.guardar(6,radio.getEstacion());
         }
         else{
-            lblEstacion.setText(""+radio.getF6());
+            lblEstacion.setText(""+radio.sacar(6));
             seleccionarFrecuencia();
         }
     }//GEN-LAST:event_b6ActionPerformed
@@ -495,7 +495,7 @@ private Radio radio= new Radio();
             radio.guardar(7,radio.getEstacion());
         }
         else{
-            lblEstacion.setText(""+radio.getF7());
+            lblEstacion.setText(""+radio.sacar(7));
             seleccionarFrecuencia();
         }
     }//GEN-LAST:event_b7ActionPerformed
@@ -505,7 +505,7 @@ private Radio radio= new Radio();
             radio.guardar(8,radio.getEstacion());
         }
         else{
-            lblEstacion.setText(""+radio.getF8());
+            lblEstacion.setText(""+radio.sacar(8));
             seleccionarFrecuencia();
         }
     }//GEN-LAST:event_b8ActionPerformed
@@ -515,7 +515,7 @@ private Radio radio= new Radio();
             radio.guardar(9,radio.getEstacion());
         }
         else{
-            lblEstacion.setText(""+radio.getF9());
+            lblEstacion.setText(""+radio.sacar(9));
             seleccionarFrecuencia();
         }
     }//GEN-LAST:event_b9ActionPerformed
@@ -525,7 +525,7 @@ private Radio radio= new Radio();
             radio.guardar(10,radio.getEstacion());
         }
         else{
-            lblEstacion.setText(""+radio.getF10());
+            lblEstacion.setText(""+radio.sacar(10));
             seleccionarFrecuencia();
         }
     }//GEN-LAST:event_b10ActionPerformed
@@ -535,7 +535,7 @@ private Radio radio= new Radio();
             radio.guardar(11,radio.getEstacion());
         }
         else{
-            lblEstacion.setText(""+radio.getF11());
+            lblEstacion.setText(""+radio.sacar(11));
             seleccionarFrecuencia();
         }
     }//GEN-LAST:event_b11ActionPerformed
@@ -545,7 +545,7 @@ private Radio radio= new Radio();
             radio.guardar(12,radio.getEstacion());
         }
         else{
-            lblEstacion.setText(""+radio.getF12());
+            lblEstacion.setText(""+radio.sacar(12));
             seleccionarFrecuencia();
         }
     }//GEN-LAST:event_b12ActionPerformed

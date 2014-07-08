@@ -19,17 +19,5 @@ public interface InterfazRadio {
     public boolean getFrecuencia();
     public boolean getEncendido();
     public double getEstacionAM();
-    public double getEstacionFM();
-    public double getF1();
-    public double getF2();
-    public double getF3();
-    public double getF4();
-    public double getF5();
-    public double getF6();
-    public double getF7();
-    public double getF8();
-    public double getF9();
-    public double getF10();
-    public double getF11();
-    public double getF12();          
+    public double getEstacionFM();         
 }
