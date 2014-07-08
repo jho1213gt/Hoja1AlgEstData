@@ -14,6 +14,6 @@ public interface InterfazRadio {
     public void apagar();
     public void encender();
     public void guardar(int boton, double estacion);
-    public void subirEstacion(boolean frecuencia);
-    public void bajarEstacion(boolean frecuencia);
+    public double subirEstacion();
+    public double bajarEstacion();
 }

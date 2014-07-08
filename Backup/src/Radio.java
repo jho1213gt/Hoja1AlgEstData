@@ -9,7 +9,7 @@
 // Breve Descripción: Es la interfaz gráfica, que muestra todas las funciones del sistema hidráulico.
 //********************************************************************************************************
 
-public class Radio {
+public class Radio implements InterfazRadio{
     private boolean frecuencia=false;
     private boolean encendido=false;
     private double estacion=0;
