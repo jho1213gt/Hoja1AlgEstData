@@ -246,11 +246,11 @@ public class Radio {
                 }
             }
     }
-    public boolean isFrecuencia() {
+    public boolean getFrecuencia() {
         return frecuencia;
     }
 
-    public boolean isEncendido() {
+    public boolean getEncendido() {
         return encendido;
     }
 

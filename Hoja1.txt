@@ -6,4 +6,4 @@ guardar(int boton, double estacion)\
 
 **opcional
 subirEstacion(boolean estacion)
-bajarEstacion(boolean estacion)
+bajarEstacion(boolean estacion)a
