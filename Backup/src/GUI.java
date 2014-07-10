@@ -8,13 +8,16 @@
 // Breve Descripción: Es la interfaz gráfica, que muestra todas las funciones del sistema hidráulico.
 //********************************************************************************************************
 
+// Importando la libreria necesaria para la interfaz grafica
 import java.awt.Color;
 
 @SuppressWarnings("unchecked")
+// clase de interfaz grafica que extiende a configuraciones predeterminados
+// de java para la interfaz grafica
 public class GUI extends javax.swing.JFrame {
 private boolean a=false;
 private Radio radio= new Radio();
-
+    // Configuracion predeterminado del radio de la frecuencia
     public GUI() {
         initComponents();
         bloq();                        
@@ -25,7 +28,6 @@ private Radio radio= new Radio();
             am.setSelected(true);
     }        
     }
-
 
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
@@ -337,6 +339,7 @@ private Radio radio= new Radio();
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+    // seleccion de la frecuencia del radio
     private void seleccionarFrecuencia(){        
         if(radio.getFrecuencia()){
             am.setSelected(true);
@@ -345,6 +348,7 @@ private Radio radio= new Radio();
             fm.setSelected(true);
         }
     }
+    // habilitador sobre la interaccion con el programa en estado bloqueado
     private void bloq() {        
         lblFav.setEnabled(false);
         lblFrecuencia.setEnabled(false);
@@ -370,6 +374,7 @@ private Radio radio= new Radio();
         b12.setEnabled(false);
         bOnOff.setBackground(Color.red);
     }
+    // habilitador sobre la interaccion con el programa en transicion de habililtar la interaccion entre el usuario
     private void desbloq() {        
         lblFav.setEnabled(true);
         lblFrecuencia.setEnabled(true);
@@ -395,6 +400,9 @@ private Radio radio= new Radio();
         b12.setEnabled(true);
         bOnOff.setBackground(Color.green);
     }
+    // Reaccion ejecutada por el usuario sobre el estado de radio general
+    // de ver si esta encendido o apagado llamando a una configuracion predeterminada
+    // para la interaccion entre el usuario
     private void bOnOffActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bOnOffActionPerformed
         if(!radio.getEncendido()){
             desbloq();
@@ -406,30 +414,32 @@ private Radio radio= new Radio();
         }
     }//GEN-LAST:event_bOnOffActionPerformed
 
+    // Reaccion ejecutada por el usuario para salir del programa
     private void bSalirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bSalirActionPerformed
         System.exit(0);
     }//GEN-LAST:event_bSalirActionPerformed
-
+    // Accion utilizada para mostrar los valores de presente estacion
     private void amActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_amActionPerformed
         lblEstacion.setText(""+radio.getEstacionAM());  
         radio.cambiarFrecuencia(false);
     }//GEN-LAST:event_amActionPerformed
-
+    // Accion utilizada para mostrar los valores de presente estacion
     private void fmActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_fmActionPerformed
         lblEstacion.setText(""+radio.getEstacionFM());
         radio.cambiarFrecuencia(true);
     }//GEN-LAST:event_fmActionPerformed
-
+    // Accion utilizada para cambiar(subir) la estacion presente del radio
     private void bMasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bMasActionPerformed
         radio.subirEstacion();
         lblEstacion.setText(""+radio.getEstacion());
     }//GEN-LAST:event_bMasActionPerformed
-
+    // Accion utilizada para cambiar(bajar) la estacion presente del radio
     private void bMenosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bMenosActionPerformed
         radio.bajarEstacion();
         lblEstacion.setText(""+radio.getEstacion());
     }//GEN-LAST:event_bMenosActionPerformed
-
+    // Accion utilizada para guardar la estacion con la frecuencia seleccionado
+    // con la funcion de cargar inmediatamente la estacion favorita
     private void b1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_b1ActionPerformed
         if(fijarFav.isSelected()){
             radio.guardar(1,radio.getEstacion());
@@ -439,7 +449,8 @@ private Radio radio= new Radio();
             seleccionarFrecuencia();
         }
     }//GEN-LAST:event_b1ActionPerformed
-
+    // Accion utilizada para guardar la estacion con la frecuencia seleccionado
+    // con la funcion de cargar inmediatamente la estacion favorita
     private void b2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_b2ActionPerformed
         if(fijarFav.isSelected()){
             radio.guardar(2,radio.getEstacion());
@@ -449,7 +460,8 @@ private Radio radio= new Radio();
             seleccionarFrecuencia();
         }
     }//GEN-LAST:event_b2ActionPerformed
-
+    // Accion utilizada para guardar la estacion con la frecuencia seleccionado
+    // con la funcion de cargar inmediatamente la estacion favorita
     private void b3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_b3ActionPerformed
         if(fijarFav.isSelected()){
             radio.guardar(3,radio.getEstacion());
@@ -459,7 +471,8 @@ private Radio radio= new Radio();
             seleccionarFrecuencia();
         }
     }//GEN-LAST:event_b3ActionPerformed
-
+    // Accion utilizada para guardar la estacion con la frecuencia seleccionado
+    // con la funcion de cargar inmediatamente la estacion favorita
     private void b4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_b4ActionPerformed
         if(fijarFav.isSelected()){
             radio.guardar(4,radio.getEstacion());
@@ -469,7 +482,8 @@ private Radio radio= new Radio();
             seleccionarFrecuencia();
         }
     }//GEN-LAST:event_b4ActionPerformed
-
+    // Accion utilizada para guardar la estacion con la frecuencia seleccionado
+    // con la funcion de cargar inmediatamente la estacion favorita
     private void b5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_b5ActionPerformed
         if(fijarFav.isSelected()){
             radio.guardar(5,radio.getEstacion());
@@ -479,7 +493,8 @@ private Radio radio= new Radio();
             seleccionarFrecuencia();
         }
     }//GEN-LAST:event_b5ActionPerformed
-
+    // Accion utilizada para guardar la estacion con la frecuencia seleccionado
+    // con la funcion de cargar inmediatamente la estacion favorita
     private void b6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_b6ActionPerformed
         if(fijarFav.isSelected()){
             radio.guardar(6,radio.getEstacion());
@@ -489,7 +504,8 @@ private Radio radio= new Radio();
             seleccionarFrecuencia();
         }
     }//GEN-LAST:event_b6ActionPerformed
-
+    // Accion utilizada para guardar la estacion con la frecuencia seleccionado
+    // con la funcion de cargar inmediatamente la estacion favorita
     private void b7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_b7ActionPerformed
         if(fijarFav.isSelected()){
             radio.guardar(7,radio.getEstacion());
@@ -499,7 +515,8 @@ private Radio radio= new Radio();
             seleccionarFrecuencia();
         }
     }//GEN-LAST:event_b7ActionPerformed
-
+    // Accion utilizada para guardar la estacion con la frecuencia seleccionado
+    // con la funcion de cargar inmediatamente la estacion favorita
     private void b8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_b8ActionPerformed
         if(fijarFav.isSelected()){
             radio.guardar(8,radio.getEstacion());
@@ -509,7 +526,8 @@ private Radio radio= new Radio();
             seleccionarFrecuencia();
         }
     }//GEN-LAST:event_b8ActionPerformed
-
+    // Accion utilizada para guardar la estacion con la frecuencia seleccionado
+    // con la funcion de cargar inmediatamente la estacion favorita
     private void b9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_b9ActionPerformed
         if(fijarFav.isSelected()){
             radio.guardar(9,radio.getEstacion());
@@ -519,7 +537,8 @@ private Radio radio= new Radio();
             seleccionarFrecuencia();
         }
     }//GEN-LAST:event_b9ActionPerformed
-
+    // Accion utilizada para guardar la estacion con la frecuencia seleccionado
+    // con la funcion de cargar inmediatamente la estacion favorita
     private void b10ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_b10ActionPerformed
         if(fijarFav.isSelected()){
             radio.guardar(10,radio.getEstacion());
@@ -529,7 +548,8 @@ private Radio radio= new Radio();
             seleccionarFrecuencia();
         }
     }//GEN-LAST:event_b10ActionPerformed
-
+    // Accion utilizada para guardar la estacion con la frecuencia seleccionado
+    // con la funcion de cargar inmediatamente la estacion favorita
     private void b11ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_b11ActionPerformed
         if(fijarFav.isSelected()){
             radio.guardar(11,radio.getEstacion());
@@ -539,7 +559,8 @@ private Radio radio= new Radio();
             seleccionarFrecuencia();
         }
     }//GEN-LAST:event_b11ActionPerformed
-
+    // Accion utilizada para guardar la estacion con la frecuencia seleccionado
+    // con la funcion de cargar inmediatamente la estacion favorita
     private void b12ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_b12ActionPerformed
         if(fijarFav.isSelected()){
             radio.guardar(12,radio.getEstacion());
@@ -583,7 +604,8 @@ private Radio radio= new Radio();
                 new GUI().setVisible(true);
             }
         });
-    }
+    } 
+    // declaracion de los variables que conforma al interfaz grafica
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JRadioButton am;
     private javax.swing.JButton b1;

@@ -9,7 +9,9 @@
 // Breve Descripción: Es la interfaz gráfica, que muestra todas las funciones del sistema hidráulico.
 //********************************************************************************************************
 
+// clase que implementa a la clase radio
 public class Radio implements InterfazRadio{
+    // definiciones de las variables con los respectivos parametros
     private boolean frecuencia=false;
     private boolean encendido=false;
     private double estacion=0;
@@ -30,9 +32,15 @@ public class Radio implements InterfazRadio{
     private int fav;
     public Radio() {
     }
+    
+    // conjunto de los sets y gets de las variables definidas
+    // con ciertos metodos necesarios 
+    
+    // metodo para cambio de la frecuencia
     public void cambiarFrecuencia(boolean frecuencia) {
         this.frecuencia = frecuencia;        
     }
+    // metodo para cargar los valores guardados con cierta estacion y la frecuencia
     public double sacar(int boton){
         fav=boton;
         if(fav==1){
@@ -75,15 +83,19 @@ public class Radio implements InterfazRadio{
             return 0;
         }
     }
+    // metodo para establecer el radio en estado apagado
     public void apagar(){
         encendido=false;        
     }
+    // metodo para establecer el radio en estado encendido    
     public void encender(){
         encendido=true;        
     }
+    // metodo para guardar la estacion y la frecuencia generado por el usuario
     public void guardar(int boton, double estacion){
         this.estacion= estacion;
         fav=boton;
+        // condiciones para varios presets que guardaran la configuracion del radio del usuario
         if(fav==1){
             f1=estacion;
             if(estacion>120){
@@ -193,6 +205,7 @@ public class Radio implements InterfazRadio{
             }
         }
     }
+    // metodo para subir la estacion de la frecuencia configurado por el usuario
     public double subirEstacion(){
         this.frecuencia=frecuencia;
         if(frecuencia){
@@ -220,6 +233,7 @@ public class Radio implements InterfazRadio{
             }
         }
     }
+    // metodo para bajar la estacion de la frecuencia configurado por el usuario
         public double bajarEstacion(){
         if(frecuencia){
             if(estacionFM<=107.9 & estacionFM>87.9){
@@ -246,26 +260,30 @@ public class Radio implements InterfazRadio{
                 }
             }
     }
+    // metodo get para obtencion de la frecuencia
     public boolean getFrecuencia() {
         return frecuencia;
     }
-
+    // metodo get para obtencion del estado de radio si es que 
+    // esta apagado o encendido
     public boolean getEncendido() {
         return encendido;
     }
-
+    
+    // metodo ser de estado del radio
     public void setEncendido(boolean encendido) {
         this.encendido = encendido;
     }
-
+    // metodo get de obtencion de estacion
     public double getEstacion() {
         return estacion;
     }
-
+    // metodo set de estacion
     public void setEstacion(double estacion) {
         this.estacion = estacion;
     }
-
+    // metodos de gets y sets para almacenamiento de la
+    // configuracion del usuario
     public double getF1() {
         return f1;
     }
@@ -361,19 +379,19 @@ public class Radio implements InterfazRadio{
     public void setF12(double f12) {
         this.f12 = f12;
     }
-
+    // meotodo get sobre la estacion con la frecuencia AM
     public double getEstacionAM() {
         return estacionAM;
     }
-
+    // metodo set sobre la estacion con la frecuencia AM
     public void setEstacionAM(double estacionAM) {
         this.estacionAM = estacionAM;
     }
-
+    // metodo get sobre la estacion con la frecuencia FM
     public double getEstacionFM() {
         return estacionFM;
     }
-
+    // metodo set sobre la estacion con la frecuencia FM
     public void setEstacionFM(double estacionFM) {
         this.estacionFM = estacionFM;
     }
