@@ -12,7 +12,7 @@
 public class Carro {
 
     public static void main(String[] args) {
-        //Se crea el objeto de tipo interfaz
+        //Se crea el objeto de tipo interfaz grafica
         GUI i = new GUI();
         i.setVisible(true);
     }
