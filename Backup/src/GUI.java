@@ -339,7 +339,16 @@ private Radio radio= new Radio();
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
-   // habilitador sobre la interaccion con el programa en estado bloqueado
+    // seleccion de la frecuencia del radio
+    private void seleccionarFrecuencia(){        
+        if(radio.getFrecuencia()){
+            am.setSelected(true);
+        }
+        else{
+            fm.setSelected(true);
+        }
+    }
+    // habilitador sobre la interaccion con el programa en estado bloqueado
     private void bloq() {        
         lblFav.setEnabled(false);
         lblFrecuencia.setEnabled(false);
@@ -437,12 +446,7 @@ private Radio radio= new Radio();
         }
         else{
             lblEstacion.setText(""+radio.sacar(1));
-            if (radio.sacar(1)<200){
-                fm.setSelected(true);
-            }
-            else{
-                am.setSelected(false);
-            }
+            seleccionarFrecuencia();
         }
     }//GEN-LAST:event_b1ActionPerformed
     // Accion utilizada para guardar la estacion con la frecuencia seleccionado
@@ -453,12 +457,7 @@ private Radio radio= new Radio();
         }
         else{
             lblEstacion.setText(""+radio.sacar(2));
-            if (radio.sacar(2)<200){
-                fm.setSelected(true);
-            }
-            else{
-                am.setSelected(false);
-            }
+            seleccionarFrecuencia();
         }
     }//GEN-LAST:event_b2ActionPerformed
     // Accion utilizada para guardar la estacion con la frecuencia seleccionado
@@ -469,12 +468,7 @@ private Radio radio= new Radio();
         }
         else{
             lblEstacion.setText(""+radio.sacar(3));
-            if (radio.sacar(3)<200){
-                fm.setSelected(true);
-            }
-            else{
-                am.setSelected(false);
-            }
+            seleccionarFrecuencia();
         }
     }//GEN-LAST:event_b3ActionPerformed
     // Accion utilizada para guardar la estacion con la frecuencia seleccionado
@@ -485,12 +479,7 @@ private Radio radio= new Radio();
         }
         else{
             lblEstacion.setText(""+radio.sacar(4));
-            if (radio.sacar(4)<200){
-                fm.setSelected(true);
-            }
-            else{
-                am.setSelected(false);
-            }
+            seleccionarFrecuencia();
         }
     }//GEN-LAST:event_b4ActionPerformed
     // Accion utilizada para guardar la estacion con la frecuencia seleccionado
@@ -501,12 +490,7 @@ private Radio radio= new Radio();
         }
         else{
             lblEstacion.setText(""+radio.sacar(5));
-            if (radio.sacar(5)<200){
-                fm.setSelected(true);
-            }
-            else{
-                am.setSelected(false);
-            }
+            seleccionarFrecuencia();
         }
     }//GEN-LAST:event_b5ActionPerformed
     // Accion utilizada para guardar la estacion con la frecuencia seleccionado
@@ -517,12 +501,7 @@ private Radio radio= new Radio();
         }
         else{
             lblEstacion.setText(""+radio.sacar(6));
-            if (radio.sacar(6)<200){
-                fm.setSelected(true);
-            }
-            else{
-                am.setSelected(false);
-            }
+            seleccionarFrecuencia();
         }
     }//GEN-LAST:event_b6ActionPerformed
     // Accion utilizada para guardar la estacion con la frecuencia seleccionado
@@ -533,12 +512,7 @@ private Radio radio= new Radio();
         }
         else{
             lblEstacion.setText(""+radio.sacar(7));
-            if (radio.sacar(7)<200){
-                fm.setSelected(true);
-            }
-            else{
-                am.setSelected(false);
-            }
+            seleccionarFrecuencia();
         }
     }//GEN-LAST:event_b7ActionPerformed
     // Accion utilizada para guardar la estacion con la frecuencia seleccionado
@@ -549,12 +523,7 @@ private Radio radio= new Radio();
         }
         else{
             lblEstacion.setText(""+radio.sacar(8));
-            if (radio.sacar(8)<200){
-                fm.setSelected(true);
-            }
-            else{
-                am.setSelected(false);
-            }
+            seleccionarFrecuencia();
         }
     }//GEN-LAST:event_b8ActionPerformed
     // Accion utilizada para guardar la estacion con la frecuencia seleccionado
@@ -565,12 +534,7 @@ private Radio radio= new Radio();
         }
         else{
             lblEstacion.setText(""+radio.sacar(9));
-            if (radio.sacar(9)<200){
-                fm.setSelected(true);
-            }
-            else{
-                am.setSelected(false);
-            }
+            seleccionarFrecuencia();
         }
     }//GEN-LAST:event_b9ActionPerformed
     // Accion utilizada para guardar la estacion con la frecuencia seleccionado
@@ -581,12 +545,7 @@ private Radio radio= new Radio();
         }
         else{
             lblEstacion.setText(""+radio.sacar(10));
-            if (radio.sacar(10)<200){
-                fm.setSelected(true);
-            }
-            else{
-                am.setSelected(false);
-            }
+            seleccionarFrecuencia();
         }
     }//GEN-LAST:event_b10ActionPerformed
     // Accion utilizada para guardar la estacion con la frecuencia seleccionado
@@ -597,12 +556,7 @@ private Radio radio= new Radio();
         }
         else{
             lblEstacion.setText(""+radio.sacar(11));
-            if (radio.sacar(11)<200){
-                fm.setSelected(true);
-            }
-            else{
-                am.setSelected(false);
-            }
+            seleccionarFrecuencia();
         }
     }//GEN-LAST:event_b11ActionPerformed
     // Accion utilizada para guardar la estacion con la frecuencia seleccionado
@@ -613,12 +567,7 @@ private Radio radio= new Radio();
         }
         else{
             lblEstacion.setText(""+radio.sacar(12));
-            if (radio.sacar(12)<200){
-                fm.setSelected(true);
-            }
-            else{
-                am.setSelected(false);
-            }
+            seleccionarFrecuencia();
         }
     }//GEN-LAST:event_b12ActionPerformed
 
