@@ -206,6 +206,10 @@ public class Radio implements InterfazRadio{
         }
     }
     // metodo para subir la estacion de la frecuencia configurado por el usuario
+    /**
+     * 
+     * @return 
+     */
     public double subirEstacion(){
         this.frecuencia=frecuencia;
         if(frecuencia){

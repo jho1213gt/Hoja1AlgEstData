@@ -16,7 +16,7 @@ import java.awt.Color;
 // de java para la interfaz grafica
 public class GUI extends javax.swing.JFrame {
 private boolean a=false;
-private Radio radio= new Radio();
+private InterfazRadio radio= new Radio();
     // Configuracion predeterminado del radio de la frecuencia
     public GUI() {
         initComponents();
