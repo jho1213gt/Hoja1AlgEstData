@@ -8,7 +8,9 @@
 // Breve Descripción: Es la clase principal, que llama a interfaz y corre el programa.
 //********************************************************************************************************
 
-// clase driver para correr el programa
+/**
+ * clase driver para correr el programa 
+ */
 public class Carro {
 
     public static void main(String[] args) {

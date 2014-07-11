@@ -8,8 +8,12 @@
 // Breve Descripción: Es la interfaz para asegurar el contrato de los métodos que debe implementer Radio.
 //********************************************************************************************************
 
-// clase interfaz para el radio con
-// declaraciones de las variables definidas
+/**
+ * clase interfaz para el radio con
+ * declaraciones de las variables definidas
+ * @return
+ */
+
 public interface InterfazRadio {
     public void cambiarFrecuencia(boolean frecuencia);
     public double sacar(int boton);
