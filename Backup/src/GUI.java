@@ -431,18 +431,33 @@ private Radio radio= new Radio();
     // Accion utilizada para cambiar(subir) la estacion presente del radio
     private void bMasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bMasActionPerformed
         radio.subirEstacion();
-        lblEstacion.setText(""+radio.getEstacion());
+        if(radio.getFrecuencia()){
+           lblEstacion.setText(""+radio.getEstacionFM()); 
+        }
+        else{
+            lblEstacion.setText(""+radio.getEstacionAM());
+        }        
     }//GEN-LAST:event_bMasActionPerformed
     // Accion utilizada para cambiar(bajar) la estacion presente del radio
     private void bMenosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bMenosActionPerformed
         radio.bajarEstacion();
-        lblEstacion.setText(""+radio.getEstacion());
+        if(radio.getFrecuencia()){
+           lblEstacion.setText(""+radio.getEstacionFM()); 
+        }
+        else{
+            lblEstacion.setText(""+radio.getEstacionAM());
+        }        
     }//GEN-LAST:event_bMenosActionPerformed
     // Accion utilizada para guardar la estacion con la frecuencia seleccionado
     // con la funcion de cargar inmediatamente la estacion favorita
     private void b1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_b1ActionPerformed
-        if(fijarFav.isSelected()){
-            radio.guardar(1,radio.getEstacion());
+        if(fijarFav.isSelected()){            
+            if(radio.getFrecuencia()){
+               radio.guardar(1,radio.getEstacionFM()); 
+            }
+            else{
+                radio.guardar(1,radio.getEstacionAM());
+            }        
         }
         else{
             lblEstacion.setText(""+radio.sacar(1));
@@ -452,8 +467,13 @@ private Radio radio= new Radio();
     // Accion utilizada para guardar la estacion con la frecuencia seleccionado
     // con la funcion de cargar inmediatamente la estacion favorita
     private void b2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_b2ActionPerformed
-        if(fijarFav.isSelected()){
-            radio.guardar(2,radio.getEstacion());
+        if(fijarFav.isSelected()){            
+            if(radio.getFrecuencia()){
+               radio.guardar(2,radio.getEstacionFM()); 
+            }
+            else{
+                radio.guardar(2,radio.getEstacionAM());
+            }
         }
         else{
             lblEstacion.setText(""+radio.sacar(2));
@@ -463,8 +483,13 @@ private Radio radio= new Radio();
     // Accion utilizada para guardar la estacion con la frecuencia seleccionado
     // con la funcion de cargar inmediatamente la estacion favorita
     private void b3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_b3ActionPerformed
-        if(fijarFav.isSelected()){
-            radio.guardar(3,radio.getEstacion());
+        if(fijarFav.isSelected()){            
+            if(radio.getFrecuencia()){
+               radio.guardar(3,radio.getEstacionFM()); 
+            }
+            else{
+                radio.guardar(3,radio.getEstacionAM());
+            }
         }
         else{
             lblEstacion.setText(""+radio.sacar(3));
@@ -474,8 +499,13 @@ private Radio radio= new Radio();
     // Accion utilizada para guardar la estacion con la frecuencia seleccionado
     // con la funcion de cargar inmediatamente la estacion favorita
     private void b4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_b4ActionPerformed
-        if(fijarFav.isSelected()){
-            radio.guardar(4,radio.getEstacion());
+        if(fijarFav.isSelected()){            
+            if(radio.getFrecuencia()){
+               radio.guardar(4,radio.getEstacionFM()); 
+            }
+            else{
+                radio.guardar(4,radio.getEstacionAM());
+            }
         }
         else{
             lblEstacion.setText(""+radio.sacar(4));
@@ -485,8 +515,13 @@ private Radio radio= new Radio();
     // Accion utilizada para guardar la estacion con la frecuencia seleccionado
     // con la funcion de cargar inmediatamente la estacion favorita
     private void b5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_b5ActionPerformed
-        if(fijarFav.isSelected()){
-            radio.guardar(5,radio.getEstacion());
+        if(fijarFav.isSelected()){            
+            if(radio.getFrecuencia()){
+               radio.guardar(5,radio.getEstacionFM()); 
+            }
+            else{
+                radio.guardar(5,radio.getEstacionAM());
+            }
         }
         else{
             lblEstacion.setText(""+radio.sacar(5));
@@ -496,8 +531,13 @@ private Radio radio= new Radio();
     // Accion utilizada para guardar la estacion con la frecuencia seleccionado
     // con la funcion de cargar inmediatamente la estacion favorita
     private void b6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_b6ActionPerformed
-        if(fijarFav.isSelected()){
-            radio.guardar(6,radio.getEstacion());
+        if(fijarFav.isSelected()){            
+            if(radio.getFrecuencia()){
+               radio.guardar(6,radio.getEstacionFM()); 
+            }
+            else{
+                radio.guardar(6,radio.getEstacionAM());
+            }
         }
         else{
             lblEstacion.setText(""+radio.sacar(6));
@@ -507,8 +547,13 @@ private Radio radio= new Radio();
     // Accion utilizada para guardar la estacion con la frecuencia seleccionado
     // con la funcion de cargar inmediatamente la estacion favorita
     private void b7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_b7ActionPerformed
-        if(fijarFav.isSelected()){
-            radio.guardar(7,radio.getEstacion());
+        if(fijarFav.isSelected()){            
+            if(radio.getFrecuencia()){
+               radio.guardar(7,radio.getEstacionFM()); 
+            }
+            else{
+                radio.guardar(7,radio.getEstacionAM());
+            }
         }
         else{
             lblEstacion.setText(""+radio.sacar(7));
@@ -518,8 +563,13 @@ private Radio radio= new Radio();
     // Accion utilizada para guardar la estacion con la frecuencia seleccionado
     // con la funcion de cargar inmediatamente la estacion favorita
     private void b8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_b8ActionPerformed
-        if(fijarFav.isSelected()){
-            radio.guardar(8,radio.getEstacion());
+        if(fijarFav.isSelected()){            
+            if(radio.getFrecuencia()){
+               radio.guardar(8,radio.getEstacionFM()); 
+            }
+            else{
+                radio.guardar(8,radio.getEstacionAM());
+            }
         }
         else{
             lblEstacion.setText(""+radio.sacar(8));
@@ -529,8 +579,13 @@ private Radio radio= new Radio();
     // Accion utilizada para guardar la estacion con la frecuencia seleccionado
     // con la funcion de cargar inmediatamente la estacion favorita
     private void b9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_b9ActionPerformed
-        if(fijarFav.isSelected()){
-            radio.guardar(9,radio.getEstacion());
+        if(fijarFav.isSelected()){            
+            if(radio.getFrecuencia()){
+               radio.guardar(9,radio.getEstacionFM()); 
+            }
+            else{
+                radio.guardar(9,radio.getEstacionAM());
+            }
         }
         else{
             lblEstacion.setText(""+radio.sacar(9));
@@ -540,8 +595,13 @@ private Radio radio= new Radio();
     // Accion utilizada para guardar la estacion con la frecuencia seleccionado
     // con la funcion de cargar inmediatamente la estacion favorita
     private void b10ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_b10ActionPerformed
-        if(fijarFav.isSelected()){
-            radio.guardar(10,radio.getEstacion());
+        if(fijarFav.isSelected()){            
+            if(radio.getFrecuencia()){
+               radio.guardar(10,radio.getEstacionFM()); 
+            }
+            else{
+                radio.guardar(10,radio.getEstacionAM());
+            }
         }
         else{
             lblEstacion.setText(""+radio.sacar(10));
@@ -551,8 +611,13 @@ private Radio radio= new Radio();
     // Accion utilizada para guardar la estacion con la frecuencia seleccionado
     // con la funcion de cargar inmediatamente la estacion favorita
     private void b11ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_b11ActionPerformed
-        if(fijarFav.isSelected()){
-            radio.guardar(11,radio.getEstacion());
+        if(fijarFav.isSelected()){            
+            if(radio.getFrecuencia()){
+               radio.guardar(11,radio.getEstacionFM()); 
+            }
+            else{
+                radio.guardar(11,radio.getEstacionAM());
+            }
         }
         else{
             lblEstacion.setText(""+radio.sacar(11));
@@ -562,8 +627,13 @@ private Radio radio= new Radio();
     // Accion utilizada para guardar la estacion con la frecuencia seleccionado
     // con la funcion de cargar inmediatamente la estacion favorita
     private void b12ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_b12ActionPerformed
-        if(fijarFav.isSelected()){
-            radio.guardar(12,radio.getEstacion());
+        if(fijarFav.isSelected()){            
+            if(radio.getFrecuencia()){
+               radio.guardar(12,radio.getEstacionFM()); 
+            }
+            else{
+                radio.guardar(12,radio.getEstacionAM());
+            }
         }
         else{
             lblEstacion.setText(""+radio.sacar(12));

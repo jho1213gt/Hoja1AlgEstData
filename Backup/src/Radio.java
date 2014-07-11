@@ -211,24 +211,20 @@ public class Radio implements InterfazRadio{
         if(frecuencia){
             if(estacionFM<107.9){
               estacionFM+=0.2;
-              estacion=estacionFM;
               return estacionFM;              
            }
             else{
                 estacionFM=87.9;
-                estacion=estacionFM;
                 return estacionFM;
             }            
         }
         else{
            if(estacionAM<1610){
               estacionAM+=10;
-              estacion=estacionAM;
               return estacionAM;
            }
             else{
                 estacionAM=530;
-                estacion=estacionAM;
                 return estacionAM;
             }
         }
@@ -238,24 +234,20 @@ public class Radio implements InterfazRadio{
         if(frecuencia){
             if(estacionFM<=107.9 & estacionFM>87.9){
               estacionFM-=0.2;
-              estacion=estacionFM;
               return estacionFM;
            }
             else{
                 estacionFM=107.9;
-                estacion=estacionFM;
                 return estacionFM;
             }
         }
         else{
             if(estacionAM<=1610 & estacionAM>530){
                   estacionAM-=10;
-                  estacion=estacionAM;
                   return estacionAM;
             }
                 else{
                     estacionAM=1610;
-                    estacion=estacionAM;
                     return estacionAM;
                 }
             }
