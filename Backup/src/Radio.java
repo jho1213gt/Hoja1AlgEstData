@@ -1,13 +1,15 @@
-
-//*******************************************************************************************************
-// Autor: Pablo Argueta Carné: 13028
-//        Kuk Chung     Carné: 13279
-//        Aarón Girón   Carné: 13042
-// Sección: 30
-// Fecha: 5/7/14
-// Nombre de Archivo: GUI.java
-// Breve Descripción: Es la interfaz gráfica, que muestra todas las funciones del sistema hidráulico.
-//********************************************************************************************************
+/**
+ * 
+ * @author Pablo Argueta Carné: 13028
+ * @author Kuk Chung     Carné: 13
+ * @author Aarón Girón   Carné: 13
+ * Sección: 30
+ * Fecha: 5/7/14
+ * Nombre de Archivo: Radio.java
+ * Breve Descripción: Es la clase que tiene todos los métodos para hacer funcionar la radio de la GUI
+ *                    mediante la implementación de la interfaz InterfazRadio.
+ * 
+ */
 
 /**
  * clase que implementa a la clase radio

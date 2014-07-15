@@ -1,12 +1,14 @@
-//*******************************************************************************************************
-// Autor: Pablo Argueta Carné: 13028
-//        Kuk Chung     Carné: 13
-//        Aarón Girón   Carné: 13
-// Sección: 30
-// Fecha: 5/7/14
-// Nombre de Archivo: Carro.java
-// Breve Descripción: Es la clase principal, que llama a interfaz y corre el programa.
-//********************************************************************************************************
+/**
+ * 
+ * @author Pablo Argueta Carné: 13028
+ * @author Kuk Chung     Carné: 13
+ * @author Aarón Girón   Carné: 13
+ * Sección: 30
+ * Fecha: 5/7/14
+ * Nombre de Archivo: Carro.java
+ * Breve Descripción: Es la clase principal, que llama a interfaz y corre el programa.
+ * 
+ */
 
 /**
  * clase driver para correr el programa 

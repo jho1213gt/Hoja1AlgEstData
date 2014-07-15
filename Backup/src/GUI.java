@@ -1,12 +1,14 @@
-//*******************************************************************************************************
-// Autor: Pablo Argueta Carné: 13028
-//        Kuk Chung     Carné: 13
-//        Aarón Girón   Carné: 13
-// Sección: 30
-// Fecha: 5/7/14
-// Nombre de Archivo: GUI.java
-// Breve Descripción: Es la interfaz gráfica, que muestra todas las funciones del sistema hidráulico.
-//********************************************************************************************************
+/**
+ * 
+ * @author Pablo Argueta Carné: 13028
+ * @author Kuk Chung     Carné: 13
+ * @author Aarón Girón   Carné: 13
+ * Sección: 30
+ * Fecha: 5/7/14
+ * Nombre de Archivo: GUI.java
+ * Breve Descripción: Es la interfaz gráfica, que muestra todas las funciones del sistema hidráulico.
+ * 
+ */
 
 /**
  * Importando la libreria necesaria para la interfaz grafica
